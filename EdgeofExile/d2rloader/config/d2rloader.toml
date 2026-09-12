@@ -1,0 +1,95 @@
+#==============================================================================
+# D2RLoader mod settings
+#
+# These settings only apply while this mod is active.
+# Remove the # before a setting to enable it.
+#==============================================================================
+
+[d2rcore.game_rules]
+# Choose the Aura Enchanted selection rules while this mod is active.
+# Valid values are "3.1" and "3.2".
+# aura_enchanted_selection = "3.2"
+
+# Choose the Cursed proc rule used when Bind Demon converts a monster.
+# "3.1" uses MonUMod row 34: 75% chance to cast Amplify Damage.
+# "3.2" uses MonUMod row 35: 5% chance to cast Amplify Damage.
+# bind_demon_curse_selection = "3.2"
+
+[d2rcore.automap]
+# Show the current area name on the automap.
+# show_area_name = true
+
+# Show the game version on the automap.
+# show_game_version = false
+
+# Show the current difficulty on the automap.
+# show_game_difficulty = true
+
+# Show the native IP address for LAN and Direct Join games.
+# Listed games always keep the resolved host address private.
+# show_game_ip_address = true
+
+# Show the native game type, such as EXPANSION, on the automap.
+# show_game_type_expansion = false
+
+# Show the advertised Game ID below the current game name on the automap.
+# show_game_id = true
+
+# Show D2RLoader or the active mod name after the native automap details.
+# show_current_mod = true
+
+[d2rcore.items]
+# Show socket counts on normal and superior ground items.
+# show_ground_sockets = false
+
+# Set the maximum number of floor item labels shown at once.
+# Valid values are 32 through 128.
+# floor_item_display_limit = 32
+
+# Show item levels on weapons, armor, rings, amulets, charms, and jewels.
+# display_item_levels = false
+
+# Hold Ctrl or the controller’s right trigger to see the possible stat rolls for an item.
+# item_stat_ranges = true
+
+# Show the highest number of sockets each item can have.
+# maximum_sockets = true
+
+[d2rcore.player]
+# Allow D2R's built-in respec shortcut.
+# This does not add extra Akara respecs.
+# enable_respec = false
+
+# Keep the Toggle Renderer keybind available while playing a RotW character.
+# always_enable_rotw_legacy_graphics_keybind = false
+
+[d2rcore.stash]
+# Add more shared stash tabs after the vanilla tabs.
+# The maximum is 995 additional tabs (1,000 total in RotW).
+# add_shared_tabs = 0
+
+# Set the material stack limit for the advanced stash.
+# 99 is vanilla. The maximum is 255.
+# set_materials_limit = 99
+
+[d2rloader.advanced]
+# Stop global plugins and patches from loading.
+# Mod plugins and patches are still controlled by allow_mod_extensions.
+# suppress_global_extensions = false
+
+[d2rloader.plugins]
+# Activate enabled plugins in this order. Use each plugin's stable id, not its DLL name.
+# "*" keeps every unlisted plugin in the normal mod-then-global order at that position.
+# Without "*", unlisted plugins activate after the listed ids.
+# load_order = ["d2rl-charm-inv", "*", "other-plugin-id"]
+
+[d2rloader.developer]
+# Add data/global/.DISABLE_DEBUG to disable D2RLoader debug tools and cheats shortcuts.
+# Useful for packed .mpq mods, where users cannot delete the marker as a loose file.
+
+[d2rcore.fonts]
+# Register custom fonts for this mod.
+# Names become D2WinFontFace values.
+# Paths are relative to data/hd/ui/fonts.
+# Fonts placed directly in data/hd/ui/fonts are also registered by filename.
+# MyFont = "MyFont.ttf"
