@@ -1,1 +1,2 @@
 Skill Strings:50000+
+Item-modifier String: 55000+
