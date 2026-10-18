@@ -1,0 +1,1711 @@
+{
+ "type": "AdvancedStatsPanel",
+ "name": "AdvancedStatsPanel",
+ "fields": {
+  "rect": {
+   "x": 1398,
+   "y": -651
+  },
+  "anchor": "$LeftPanelAnchor",
+  "defaultWidget": "ScrollBar",
+  "textPadding": 16
+ },
+ "children": [
+  {
+   "type": "ImageWidget",
+   "name": "Background",
+   "fields": {
+    "filename": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_BG"
+   }
+  },
+  {
+   "type": "ClickCatcherWidget",
+   "name": "ClickCatcher",
+   "fields": {
+    "rect": {
+     "width": 875,
+     "height": 1500
+    }
+   }
+  },
+  {
+   "type": "ImageWidget",
+   "name": "ScrollBackground",
+   "fields": {
+    "rect": {
+     "x": 765,
+     "y": 150
+    },
+    "filename": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollBar"
+   }
+  },
+  {
+   "type": "ScrollControllerWidget",
+   "name": "ScrollBar",
+   "fields": {
+    "rect": {
+     "x": 765,
+     "y": 160,
+     "width": 36,
+     "height": 1233
+    },
+    "upArrowFilepath": "",
+    "downArrowFilepath": "",
+    "barFilepath": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollIndicator",
+    "viewName": "ListContainer"
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "Title",
+   "fields": {
+    "text": "@AdvancedStats",
+    "rect": {
+     "x": 120,
+     "y": 61,
+     "width": 640,
+     "height": 85
+    },
+    "style": "$StyleTitleBlock"
+   }
+  },
+  {
+   "type": "ListWidget",
+   "name": "ListContainer",
+   "fields": {
+    "rect": {
+     "x": 148,
+     "y": 212,
+     "width": 576,
+     "height": 1231
+    },
+    "direction": "vertical",
+    "scrollControllerName": "ScrollBar"
+   },
+   "children": [
+    {
+     "type": "ListItemWidget",
+     "name": "OptionTemplate",
+     "fields": {
+      "rect": {
+       "x": 0,
+       "y": 10,
+       "width": 576,
+       "height": 70
+      }
+     },
+     "children": [
+      {
+       "type": "NineTileImageWidget",
+       "name": "TextContainer",
+       "fields": {
+        "rect": {
+         "x": 0,
+         "y": 0,
+         "width": 576,
+         "height": 0
+        },
+        "filename": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_Cell",
+        "tileScale": 1.0,
+        "allowScissorResizing": false
+       }
+      },
+      {
+       "type": "TextBoxWidget",
+       "name": "StatText",
+       "fields": {
+        "rect": {
+         "x": 20,
+         "y": 0,
+         "width": 516,
+         "height": 50
+        },
+        "style": {
+         "fontColor": "$FontColorWhite",
+         "pointSize": "$SmallFontSize",
+         "alignment": {
+          "h": "center",
+          "v": "center"
+         },
+         "options": {
+          "lineWrap": true,
+          "pipeCharacterBehavior": "handle"
+         }
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ButtonWidget",
+   "name": "CloseButton",
+   "fields": {
+    "rect": {
+     "x": 791,
+     "y": 10
+    },
+    "filename": "PANEL\\closebtn_4x",
+    "hoveredFrame": 3,
+    "onClickMessage": "PanelManager:ClosePanel:AdvancedStatsPanel",
+    "tooltipString": "@strClose",
+    "sound": "cursor_close_window_hd"
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoESummary",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 160,
+     "width": 632,
+     "height": 32
+    },
+    "style": {
+     "fontColor": "$FontColorLightGold",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "center",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH0",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 198,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL0",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 232,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV0",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 232,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL1",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 260,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV1",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 260,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL2",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 288,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV2",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 288,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL3",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 316,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV3",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 316,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL4",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 344,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV4",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 344,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL5",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 372,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV5",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 372,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL6",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 400,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV6",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 400,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH1",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 434,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL7",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 468,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV7",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 468,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL8",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 496,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV8",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 496,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL9",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 524,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV9",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 524,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL10",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 552,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV10",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 552,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL11",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 580,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV11",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 580,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL12",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 608,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV12",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 608,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH2",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 642,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL13",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 676,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV13",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 676,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL14",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 704,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV14",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 704,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL15",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 732,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV15",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 732,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL16",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 760,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV16",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 760,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL17",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 788,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV17",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 788,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH3",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 822,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL18",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 856,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV18",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 856,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL19",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 884,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV19",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 884,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL20",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 912,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV20",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 912,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH4",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 946,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL21",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 980,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV21",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 980,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL22",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1008,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV22",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1008,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL23",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1036,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV23",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1036,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL24",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1064,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV24",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1064,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL25",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1092,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV25",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1092,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL26",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1120,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV26",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1120,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL27",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1148,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV27",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1148,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEH5",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 1182,
+     "width": 632,
+     "height": 34
+    },
+    "style": {
+     "fontColor": "$FontColorGoldYellow",
+     "pointSize": "$MediumFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL28",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1216,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV28",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1216,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL29",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1244,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV29",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1244,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL30",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1272,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV30",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1272,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL31",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1300,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV31",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1300,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEL32",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 130,
+     "y": 1328,
+     "width": 214,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorBeige",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "left",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEV32",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 344,
+     "y": 1328,
+     "width": 412,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorWhite",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "right",
+      "v": "center"
+     }
+    }
+   }
+  },
+  {
+   "type": "TextBoxWidget",
+   "name": "EoEFooter",
+   "fields": {
+    "text": "",
+    "rect": {
+     "x": 124,
+     "y": 1362,
+     "width": 632,
+     "height": 28
+    },
+    "style": {
+     "fontColor": "$FontColorGray",
+     "pointSize": "$SmallFontSize",
+     "alignment": {
+      "h": "center",
+      "v": "center"
+     }
+    }
+   }
+  }
+ ]
+}
